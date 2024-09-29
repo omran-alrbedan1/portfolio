@@ -1,13 +1,11 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 
-// Also install this npm i --save-dev @types/react-lottie
-import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
 
 import { BackgroundGradientAnimation } from "./GradientBg";
-import animationData from "@/data/confetti.json";
+
 import MagicButton from "./MagicButton";
 import { GlobeDemo } from "./GridGlobe";
 
@@ -58,7 +56,7 @@ export const BentoGridItem = ({
   const defaultOptions = {
     loop: copied,
     autoplay: copied,
-    animationData: animationData,
+  
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },
@@ -164,7 +162,6 @@ export const BentoGridItem = ({
                   copied ? "block" : "block"
                 }`}
               >
-                <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
               <MagicButton
